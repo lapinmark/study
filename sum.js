@@ -1,4 +1,4 @@
-var a = +prompt("Введите первое число / Enter first number", "");
-var b = +prompt("Введите второе число / Enter second number", "");
+var a = +prompt("Введите первое число", "");
+var b = +prompt("Введите второе число", "");
 
-alert( a + b );
+alert( "Сумма чисел равна: " + a + b );
