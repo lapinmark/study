@@ -1,15 +1,20 @@
 <!doctype html>
 <script>
-function find(array, value) {
-  if (array.indexOf) {
-    return array.indexOf(value);
-  }
+if ([].indexOf) {
 
+var find = function(array, value) {
+  return array.indexOf(value);
+}
+
+} else {
+var find = function(array, value) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] === value) return i;
   }
 
   return -1;
+}
+
 }
 
 var arr = ["abc", 5, 3, "b", -456];
