@@ -1,0 +1,24 @@
+<!doctype html>
+<script>
+
+var str = prompt('Введите строку вида *-*-*', '')
+
+function camelize(str) {
+  
+  var chars = str.split('');
+  
+  for (var i = 0; i < chars.length; i++) {
+    if (chars[i] == '-') {
+      chars[i+1] = chars[i+1].toUpperCase();
+      delete chars[i];
+    }
+  }
+  
+  return chars.join('');
+  
+}
+
+alert( camelize(str) );
+
+</script>
+</html>
