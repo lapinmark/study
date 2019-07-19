@@ -4,19 +4,15 @@
 var str = prompt('Введите строку вида *-*-*', '')
 
 function camelize(str) {
-  
-  var chars = str.split('');
-  
-  for (var i = 0; i < chars.length; i++) {
-    if (chars[i] == '-') {
-      chars[i+1] = chars[i+1].toUpperCase();
-      delete chars[i];
-    }
+  var arr = str.split('-');
+
+  for (var i = 1; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
   }
-  
-  return chars.join('');
-  
+
+  return arr.join('');
 }
+
 
 alert( camelize(str) );
 
