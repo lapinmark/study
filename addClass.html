@@ -1,0 +1,27 @@
+<!doctype html>
+<script>
+
+  function addClass(obj, cls) {
+    var classes = obj.className ? obj.className.split(' ') : [];
+  
+    for (var i = 0; i < classes.length; i++) {
+      if (classes[i] == cls) return; // проверка на наличие класса
+    }
+  
+    classes.push(cls); // добавление класса
+  
+    obj.className = classes.join(' '); // обновление свойства
+  }
+
+  var obj = {
+  className: 's c r'
+  };
+
+  addClass(obj, 'i');
+  addClass(obj, 'p');
+  addClass(obj, 't');
+  alert(obj.className) // s c r i p t
+
+</script>
+</html>
+  
