@@ -2,15 +2,10 @@
 <script>
 
 function isEmpty(obj) {
-
- var counter = 0;
-
- for (var key in obj) {
-   counter++;
- }
- 
- return !counter;
-
+  for (var key in obj) {
+    return false;
+  }
+  return true;
 }
 
 var schedule = {};
