@@ -1,0 +1,33 @@
+<!doctype html>
+<script>
+
+"use strict";
+
+function maxSalary(salaries) {
+
+  var max = 0;
+  var maxName = "";
+  
+  for (var name in salaries) {
+  
+    if (max < salaries[name]) {
+      max = salaries[name];
+      maxName = name;
+    }
+    
+  }
+  
+  return maxName
+  
+}
+
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 150
+};
+
+alert( maxSalary(salaries) || "нет сотрудников");
+
+</script>
+</html>
