@@ -1,0 +1,29 @@
+<!doctype html>
+<script>
+
+  function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+  }
+  
+  var menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+  };
+  
+  function multiplyNumeric(menu) {
+    
+    for (keys in menu) {
+      if ( isNumeric(menu[keys]) ) {
+        menu[keys] *= 2;
+      }
+    }
+    
+  }
+  
+  multiplyNumeric(menu);
+  
+  alert( "menu width=" + menu.width + " height=" + menu.height + " title=" + menu.title );
+
+</script>
+</html>
