@@ -13,11 +13,11 @@ var list = {
 };
 
 function printList(list) {
-  var tmp = list;
 
-  while (tmp) {
-    alert( tmp.value );
-    tmp = tmp.next;
+  alert( list.value );
+
+  if (list.next) {
+    printList(list.next);
   }
 
 }
