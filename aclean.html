@@ -1,0 +1,26 @@
+function aclean(arr) {
+  
+  var obj = {};
+
+  for (var i = 0; i < arr.length; i++) {
+    
+    var sorted = arr[i] // ЗОВ
+    .toLowerCase() // зов
+    .split('') // ['з','о','в']
+    .sort() // ['в','з','о']
+    .join(''); // взо
+
+    obj[sorted] = arr[i]; // сохраняет только одно значение с таким ключом
+  }
+
+  var result = [];
+
+  // теперь в obj находится для каждого ключа ровно одно значение
+  for (var key in obj) result.push(obj[key]);
+
+  return result;
+}
+
+var arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+
+alert( aclean(arr) );
